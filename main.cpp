@@ -2,6 +2,7 @@
 #include <string>
 #include <fstream>
 #include <iomanip>
+#include <ctime>
 
 using namespace std;
 
@@ -30,7 +31,7 @@ void pinjamFasilitas();
 void pengembalianFasilitas();
 int cariFasilitas(const string& nama);
 
-int main() {
+int main() {	
     loadAdminData();
     loadFasilitasData();
 
@@ -177,8 +178,8 @@ void tambahFasilitas() {
 void hapusFasilitas() {
     string nama;
     cout << "Masukkan nama fasilitas yang ingin dihapus: ";
-    cin.ignore();
     getline(cin, nama);
+    cin.ignore();
 
     int index = cariFasilitas(nama);
     if (index != -1) {
@@ -195,8 +196,8 @@ void hapusFasilitas() {
 void pinjamFasilitas() {
     string nama, nama_peminjam, nim, tanggal;
     cout << "Masukkan nama fasilitas yang ingin dipinjam: ";
-    cin.ignore();
     getline(cin, nama);
+    cin.ignore();
 
     int index = cariFasilitas(nama);
     if (index != -1) {
@@ -225,8 +226,8 @@ void pinjamFasilitas() {
 void pengembalianFasilitas() {
     string nama;
     cout << "Masukkan nama fasilitas yang ingin dikembalikan: ";
-    cin.ignore();
     getline(cin, nama);
+    cin.ignore();
 
     int index = cariFasilitas(nama);
     if (index != -1) {
